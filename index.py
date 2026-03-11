@@ -55,10 +55,14 @@ html, body, [class*="css"] {
 }
 
 /* ── Hide Streamlit Chrome ── */
-#MainMenu, footer, header { visibility: hidden; }
-.stDeployButton { display: none; }
+#MainMenu { display: none !important; }
+footer { display: none !important; }
+header { display: none !important; }
+.stDeployButton { display: none !important; }
 [data-testid="stToolbar"] { display: none !important; }
-
+[data-testid="stHeader"] { display: none !important; }
+[data-testid="stDecoration"] { display: none !important; }
+.block-container { padding-top: 1rem !important; }
 /* ── Hero Banner ── */
 .hemoscan-hero {
     text-align: center;
@@ -781,4 +785,5 @@ st.markdown("""
     <span>HemoScan</span> · Blood Analysis System &nbsp;|&nbsp; Powered by Oiron &nbsp;|&nbsp;
     AI diagnostic tool — not a substitute for professional medical advice.
 </div>
+
 """, unsafe_allow_html=True)
